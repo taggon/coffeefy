@@ -354,6 +354,7 @@
 			baseConfigurationReference = 3C84D6F33407824D39B927AE /* Pods-Coffeefy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PJ627876A5;
 				INFOPLIST_FILE = Coffeefy/Info.plist;
@@ -369,6 +370,7 @@
 			baseConfigurationReference = 0356958897CBA1B6DE6A3E02 /* Pods-Coffeefy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PJ627876A5;
 				INFOPLIST_FILE = Coffeefy/Info.plist;

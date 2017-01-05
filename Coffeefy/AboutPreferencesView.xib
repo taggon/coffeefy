@@ -9,6 +9,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AboutPreferencesViewController" customModule="Coffeefy" customModuleProvider="target">
             <connections>
+                <outlet property="versionField" destination="8zm-SN-lr6" id="ZdP-5w-MSM"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -34,9 +35,18 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-vT-fNa">
-                                <rect key="frame" x="199" y="60" width="127" height="17"/>
+                                <rect key="frame" x="199" y="45" width="163" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="© 2017 Taegon Kim " id="Rin-UU-Hv4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zm-SN-lr6">
+                                <rect key="frame" x="199" y="67" width="163" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="YbZ-6T-JaM">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -54,6 +64,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="openHomepage:" target="-2" id="BDY-lp-fZX"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JOu-dN-vAL">
                     <rect key="frame" x="132" y="0.0" width="117" height="32"/>
@@ -62,6 +75,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="openIssueTracker:" target="-2" id="U5g-X3-Jy9"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lR6-Wu-iND">
                     <rect key="frame" x="254" y="0.0" width="123" height="32"/>
@@ -70,6 +86,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="openAuthorPage:" target="-2" id="s2S-54-G5U"/>
+                    </connections>
                 </button>
             </subviews>
             <constraints>

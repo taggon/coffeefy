@@ -69,6 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBAction func openPreference(sender: AnyObject?) {
         prefWindowController.showWindow(self)
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     @IBAction func quitApplication(sender: AnyObject?) {

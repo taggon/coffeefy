@@ -37,5 +37,14 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>URLs</key>
+	<dict>
+		<key>Author</key>
+		<string>https://taegon.kim</string>
+		<key>Homepage</key>
+		<string>https://github.com/taggon/coffeefy</string>
+		<key>Issue Tracker</key>
+		<string>https://github.com/taggon/coffeefy/issues</string>
+	</dict>
 </dict>
 </plist>
