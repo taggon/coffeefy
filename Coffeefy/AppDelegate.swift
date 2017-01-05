@@ -11,11 +11,13 @@ import MASPreferences
 import ReachabilitySwift
 import CoreWLAN
 
+public let StopAnimationNotification = NSNotification.Name("StopAnimationNotification")
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var statusMenu: NSMenu!
-    var statusItem: NSStatusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    var statusItem: NSStatusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
 
     var _prefWindowController: NSWindowController?
     var prefWindowController: NSWindowController! {
@@ -33,12 +35,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    var currentIconIndex = 3
+    var animTimer: Timer?
+    
     let reachability = Reachability()!
     let bot = LoginBot()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.image = NSImage(named: NSImageNameMenuOnStateTemplate)
         statusItem.menu = statusMenu
+        loadStatusImage(name: "coffeefy3")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.stopAnimation), name: StopAnimationNotification, object: nil)
         
         // start watching wifi connection status
         NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged),name: ReachabilityChangedNotification,object: reachability)
@@ -61,10 +68,44 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // 스타벅스 SSID일 때만 반응
         let ssid = CWWiFiClient()?.interface(withName: nil)?.ssid() ?? ""
         if ssid.lowercased().contains("starbucks") {
+            startAnimatingStatusImage()
             bot.login()
         } else {
             NSLog("This application works only with Starbucks Wifi network")
         }
+    }
+    
+    func stopAnimation(note: NSNotification) {
+        stopAnimatingStatusImage()
+    }
+    
+    func loadStatusImage(name: String) {
+        if let button = statusItem.button {
+            let size = NSMakeSize(18.0, 18.0)
+            button.image = NSImage(named: name)
+            button.image!.size = size
+        }
+    }
+    
+    func startAnimatingStatusImage() {
+        currentIconIndex = 0
+        updateStatusImage(index: 0)
+
+        animTimer = Timer.scheduledTimer(withTimeInterval: 4.0/15.0, repeats: true){ timer in
+            self.currentIconIndex = ( self.currentIconIndex + 1 ) % 4
+            self.updateStatusImage(index: self.currentIconIndex)
+        }
+    }
+    
+    func stopAnimatingStatusImage() {
+        animTimer?.invalidate()
+        animTimer = nil
+
+        updateStatusImage(index: 3)
+    }
+    
+    func updateStatusImage(index: Int) {
+        loadStatusImage(name: "coffeefy\(currentIconIndex)")
     }
 
     @IBAction func openPreference(sender: AnyObject?) {

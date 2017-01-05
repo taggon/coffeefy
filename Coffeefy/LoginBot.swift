@@ -64,6 +64,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
             }
 
             NSLog("This application works only with Startbucks Wifi network.")
+            self.stopAnimation()
         }
     }
     
@@ -93,6 +94,10 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
         NSUserNotificationCenter.default.scheduleNotification(noti)
     }
     
+    func stopAnimation() {
+        NotificationCenter.default.post(name: StopAnimationNotification, object: nil)
+    }
+    
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         let body = message.body as! String
 
@@ -104,6 +109,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
         } else if body.hasPrefix("alert:") {
             let errorMessage = body.substring(from: body.characters.index(body.characters.startIndex, offsetBy: 6))
             notify(title: "인증 에러", subtitle: errorMessage, informativeText: nil)
+            stopAnimation()
         }
     }
     
@@ -116,6 +122,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
         if host == "www.istarbucks.co.kr" || host.hasPrefix("www.google.") {
             webView.stopLoading()
             notify(title: "접속 성공", subtitle: "이제 스타벅스 와이파이를 사용할 수 있습니다.", informativeText: nil)
+            stopAnimation()
         }
     }
 }

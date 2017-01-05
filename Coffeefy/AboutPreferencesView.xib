@@ -29,7 +29,7 @@
                                 <rect key="frame" x="199" y="92" width="163" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Coffeefy" id="Rcj-1S-SKX">
-                                    <font key="font" size="28" name="MarkerFelt-Thin"/>
+                                    <font key="font" size="28" name="Helvetica-Bold"/>
                                     <color key="textColor" red="0.57986560880829008" green="0.4407564513348734" blue="0.26992281138207724" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -52,6 +52,11 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFB-AK-fPE">
+                                <rect key="frame" x="40" y="28" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="coffeefy3" id="PHv-7b-vKz"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <color key="borderColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
@@ -109,4 +114,7 @@
             </textFieldCell>
         </textField>
     </objects>
+    <resources>
+        <image name="coffeefy3" width="512" height="512"/>
+    </resources>
 </document>
