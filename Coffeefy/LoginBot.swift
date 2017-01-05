@@ -38,7 +38,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
 
         webview.navigationDelegate = self
         webview.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"
-        webview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
+        // webview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
     }
     
     func login() {
@@ -63,7 +63,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
                 }
             }
 
-            NSLog("This application works only for Startbucks Wifi network.")
+            NSLog("This application works only with Startbucks Wifi network.")
         }
     }
     
