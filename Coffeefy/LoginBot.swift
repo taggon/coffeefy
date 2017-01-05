@@ -89,7 +89,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
             noti.informativeText = informativeText
         }
         noti.soundName = NSUserNotificationDefaultSoundName
-        noti.deliveryDate = Date(timeIntervalSinceNow: 5)
+        noti.deliveryDate = Date(timeIntervalSinceNow: 1)
         NSUserNotificationCenter.default.scheduleNotification(noti)
     }
     
