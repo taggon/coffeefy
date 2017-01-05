@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GeneralPreferencesViewController" customModule="Coffeefy" customModuleProvider="target">
+            <connections>
+                <outlet property="vendor1" destination="fPE-6f-Ox7" id="phG-gc-m26"/>
+                <outlet property="vendor2" destination="fS4-bw-I2g" id="cft-An-HjQ"/>
+                <outlet property="vendor3" destination="tDE-Om-o6c" id="b0m-Yt-o1X"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dmk-on-RA2">
+                    <rect key="frame" x="50" y="156" width="27" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="이름" id="EY9-qw-Uly">
+                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4q-Lz-he8">
+                    <rect key="frame" x="38" y="116" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="이메일" id="Kbu-E3-5vJ">
+                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNr-sh-wbW">
+                    <rect key="frame" x="39" y="76" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="연락처" id="KmL-QZ-NBG">
+                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e07-I2-vo4">
+                    <rect key="frame" x="39" y="36" width="38" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="통신사" id="1Ca-gg-7PA">
+                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField identifier="name" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXp-zt-OlC">
+                    <rect key="frame" x="89" y="154" width="256" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="qow-zU-Rqy">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="tk5-w0-zo9" name="value" keyPath="values.name" id="lIf-SY-5S7"/>
+                    </connections>
+                </textField>
+                <textField identifier="email" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVO-oN-x1t">
+                    <rect key="frame" x="89" y="114" width="256" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bCU-gp-K4P">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <allowedInputSourceLocales>
+                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                        </allowedInputSourceLocales>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="tk5-w0-zo9" name="value" keyPath="values.email" id="qLW-CR-Ksj"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-dV-Rjx">
+                    <rect key="frame" x="89" y="73" width="256" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="p39-ap-Jvq">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <allowedInputSourceLocales>
+                            <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                        </allowedInputSourceLocales>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="tk5-w0-zo9" name="value" keyPath="values.phone" id="snd-EA-4pX"/>
+                    </connections>
+                </textField>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fPE-6f-Ox7">
+                    <rect key="frame" x="88" y="34" width="39" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="radio" title="KT" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="ETU-DE-cww">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="vendorDidChangeWithSender:" target="-2" id="l35-8C-vGq"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="fS4-bw-I2g">
+                    <rect key="frame" x="148" y="34" width="47" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="radio" title="SKT" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="bcc-Yb-jJU">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="vendorDidChangeWithSender:" target="-2" id="Awp-4p-Wd0"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="tDE-Om-o6c">
+                    <rect key="frame" x="213" y="34" width="61" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="radio" title="LG U+" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Tq7-Z2-o8i">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="vendorDidChangeWithSender:" target="-2" id="qaO-cb-GGb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="88" y="131"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="tk5-w0-zo9"/>
+    </objects>
+</document>

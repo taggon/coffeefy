@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AboutPreferencesViewController" customModule="Coffeefy" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box boxType="custom" borderWidth="0.0" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="rZ6-Id-0ms">
+                    <rect key="frame" x="0.0" y="35" width="380" height="165"/>
+                    <view key="contentView" id="c5s-4L-aDD">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="165"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiA-qm-Hfn">
+                                <rect key="frame" x="199" y="92" width="163" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Coffeefy" id="Rcj-1S-SKX">
+                                    <font key="font" size="28" name="MarkerFelt-Thin"/>
+                                    <color key="textColor" red="0.57986560880829008" green="0.4407564513348734" blue="0.26992281138207724" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kg-vT-fNa">
+                                <rect key="frame" x="199" y="60" width="127" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="© 2017 Taegon Kim " id="Rin-UU-Hv4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
+                    <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </box>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mca-6k-BKQ">
+                    <rect key="frame" x="3" y="0.0" width="117" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="홈페이지" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6MZ-Rn-MBn">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JOu-dN-vAL">
+                    <rect key="frame" x="132" y="0.0" width="117" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="버그 신고" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XSI-LD-JuE">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lR6-Wu-iND">
+                    <rect key="frame" x="254" y="0.0" width="123" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="개발자 홈페이지" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nwe-zj-DIw">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="rZ6-Id-0ms" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="1K6-Sa-NXo"/>
+                <constraint firstAttribute="trailing" secondItem="rZ6-Id-0ms" secondAttribute="trailing" id="7zC-Ui-XRy"/>
+                <constraint firstItem="rZ6-Id-0ms" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ESR-6K-e50"/>
+                <constraint firstAttribute="bottom" secondItem="rZ6-Id-0ms" secondAttribute="bottom" constant="35" id="aYE-W3-VZZ"/>
+            </constraints>
+            <point key="canvasLocation" x="135" y="168"/>
+        </customView>
+        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="TlI-WL-3N7">
+            <rect key="frame" x="0.0" y="0.0" width="38" height="17"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="y8a-cr-sYL">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+        </textField>
+    </objects>
+</document>

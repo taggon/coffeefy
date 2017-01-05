@@ -10,14 +10,32 @@
 		F20EDFA31E1B883600C842F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EDFA21E1B883600C842F9 /* AppDelegate.swift */; };
 		F20EDFA51E1B883600C842F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFA41E1B883600C842F9 /* Assets.xcassets */; };
 		F20EDFA81E1B883600C842F9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFA61E1B883600C842F9 /* MainMenu.xib */; };
+		F20EDFB31E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EDFB11E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift */; };
+		F20EDFB41E1B9EFA00C842F9 /* GeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesView.xib */; };
+		F20EDFB71E1B9F0E00C842F9 /* AboutPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EDFB51E1B9F0E00C842F9 /* AboutPreferencesViewController.swift */; };
+		F20EDFB81E1B9F0E00C842F9 /* AboutPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesView.xib */; };
+		F20EDFBB1E1C1D1400C842F9 /* LoginBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EDFBA1E1C1D1400C842F9 /* LoginBot.swift */; };
+		F23C74421E1D401C007B7B21 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C74411E1D401C007B7B21 /* SwiftRegex.swift */; };
+		F2BEA0DE1E1D1B1E00DFAE92 /* coffeefy.js in Resources */ = {isa = PBXBuildFile; fileRef = F2BEA0DD1E1D1B1E00DFAE92 /* coffeefy.js */; };
+		FB811DF32E815D2D4FBE4F1B /* Pods_Coffeefy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48D3B5A62CDD9F19DFC7D72 /* Pods_Coffeefy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0356958897CBA1B6DE6A3E02 /* Pods-Coffeefy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffeefy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coffeefy/Pods-Coffeefy.release.xcconfig"; sourceTree = "<group>"; };
+		3C84D6F33407824D39B927AE /* Pods-Coffeefy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coffeefy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coffeefy/Pods-Coffeefy.debug.xcconfig"; sourceTree = "<group>"; };
+		C48D3B5A62CDD9F19DFC7D72 /* Pods_Coffeefy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coffeefy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20EDF9F1E1B883600C842F9 /* Coffeefy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coffeefy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20EDFA21E1B883600C842F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F20EDFA41E1B883600C842F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F20EDFA71E1B883600C842F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F20EDFA91E1B883600C842F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F20EDFB11E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
+		F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesView.xib; sourceTree = "<group>"; };
+		F20EDFB51E1B9F0E00C842F9 /* AboutPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPreferencesViewController.swift; sourceTree = "<group>"; };
+		F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPreferencesView.xib; sourceTree = "<group>"; };
+		F20EDFBA1E1C1D1400C842F9 /* LoginBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBot.swift; sourceTree = "<group>"; };
+		F23C74411E1D401C007B7B21 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+		F2BEA0DD1E1D1B1E00DFAE92 /* coffeefy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = coffeefy.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -25,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB811DF32E815D2D4FBE4F1B /* Pods_Coffeefy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9428F2B51752208622B7B20D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C84D6F33407824D39B927AE /* Pods-Coffeefy.debug.xcconfig */,
+				0356958897CBA1B6DE6A3E02 /* Pods-Coffeefy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7187801D0682EB283B7D5AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C48D3B5A62CDD9F19DFC7D72 /* Pods_Coffeefy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F20EDF961E1B883600C842F9 = {
 			isa = PBXGroup;
 			children = (
 				F20EDFA11E1B883600C842F9 /* Coffeefy */,
 				F20EDFA01E1B883600C842F9 /* Products */,
+				9428F2B51752208622B7B20D /* Pods */,
+				D7187801D0682EB283B7D5AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,12 +88,27 @@
 		F20EDFA11E1B883600C842F9 /* Coffeefy */ = {
 			isa = PBXGroup;
 			children = (
+				F2BEA0DD1E1D1B1E00DFAE92 /* coffeefy.js */,
+				F20EDFB91E1B9F1300C842F9 /* Preferences */,
 				F20EDFA21E1B883600C842F9 /* AppDelegate.swift */,
 				F20EDFA41E1B883600C842F9 /* Assets.xcassets */,
 				F20EDFA61E1B883600C842F9 /* MainMenu.xib */,
 				F20EDFA91E1B883600C842F9 /* Info.plist */,
+				F20EDFBA1E1C1D1400C842F9 /* LoginBot.swift */,
+				F23C74411E1D401C007B7B21 /* SwiftRegex.swift */,
 			);
 			path = Coffeefy;
+			sourceTree = "<group>";
+		};
+		F20EDFB91E1B9F1300C842F9 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				F20EDFB11E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift */,
+				F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesView.xib */,
+				F20EDFB51E1B9F0E00C842F9 /* AboutPreferencesViewController.swift */,
+				F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesView.xib */,
+			);
+			name = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F20EDFAC1E1B883600C842F9 /* Build configuration list for PBXNativeTarget "Coffeefy" */;
 			buildPhases = (
+				A297B28923B3B4BFFE9CC0ED /* [CP] Check Pods Manifest.lock */,
 				F20EDF9B1E1B883600C842F9 /* Sources */,
 				F20EDF9C1E1B883600C842F9 /* Frameworks */,
 				F20EDF9D1E1B883600C842F9 /* Resources */,
+				5FA2C6D4C5956A35B68359F5 /* [CP] Embed Pods Frameworks */,
+				04785A33CFFEDA4EBAB2A349 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -118,19 +174,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20EDFB41E1B9EFA00C842F9 /* GeneralPreferencesView.xib in Resources */,
 				F20EDFA51E1B883600C842F9 /* Assets.xcassets in Resources */,
 				F20EDFA81E1B883600C842F9 /* MainMenu.xib in Resources */,
+				F20EDFB81E1B9F0E00C842F9 /* AboutPreferencesView.xib in Resources */,
+				F2BEA0DE1E1D1B1E00DFAE92 /* coffeefy.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04785A33CFFEDA4EBAB2A349 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coffeefy/Pods-Coffeefy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FA2C6D4C5956A35B68359F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coffeefy/Pods-Coffeefy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A297B28923B3B4BFFE9CC0ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F20EDF9B1E1B883600C842F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20EDFB31E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift in Sources */,
 				F20EDFA31E1B883600C842F9 /* AppDelegate.swift in Sources */,
+				F23C74421E1D401C007B7B21 /* SwiftRegex.swift in Sources */,
+				F20EDFB71E1B9F0E00C842F9 /* AboutPreferencesViewController.swift in Sources */,
+				F20EDFBB1E1C1D1400C842F9 /* LoginBot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +351,7 @@
 		};
 		F20EDFAD1E1B883600C842F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C84D6F33407824D39B927AE /* Pods-Coffeefy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -254,6 +366,7 @@
 		};
 		F20EDFAE1E1B883600C842F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0356958897CBA1B6DE6A3E02 /* Pods-Coffeefy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -285,6 +398,7 @@
 				F20EDFAE1E1B883600C842F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
