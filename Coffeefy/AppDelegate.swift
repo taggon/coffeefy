@@ -89,11 +89,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func startAnimatingStatusImage() {
         currentIconIndex = 0
-        updateStatusImage(index: 0)
+        updateStatusImage(index: currentIconIndex)
 
-        animTimer = Timer.scheduledTimer(withTimeInterval: 4.0/15.0, repeats: true){ timer in
-            self.currentIconIndex = ( self.currentIconIndex + 1 ) % 4
-            self.updateStatusImage(index: self.currentIconIndex)
+        if #available(OSX 10.12, *) {
+            animTimer = Timer.scheduledTimer(withTimeInterval: 4.0/15.0, repeats: true){ timer in
+                self.currentIconIndex = ( self.currentIconIndex + 1 ) % 4
+                self.updateStatusImage(index: self.currentIconIndex)
+            }
         }
     }
     
@@ -105,7 +107,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func updateStatusImage(index: Int) {
-        loadStatusImage(name: "coffeefy\(currentIconIndex)")
+        loadStatusImage(name: "coffeefy\(index)")
     }
 
     @IBAction func openPreference(sender: AnyObject?) {
