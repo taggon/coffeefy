@@ -19,21 +19,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     var statusItem: NSStatusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
 
-    var _prefWindowController: NSWindowController?
-    var prefWindowController: NSWindowController! {
-        get {
-            if self._prefWindowController == nil {
-                let generalPreferences = GeneralPreferencesViewController()
-                let aboutPreferences = AboutPreferencesViewController()
-                
-                let title = NSLocalizedString("Preferences", comment: "Common title for Preferences window")
-                self._prefWindowController = MASPreferencesWindowController(viewControllers: [ generalPreferences, aboutPreferences ], title: title)
-                self._prefWindowController!.window!.styleMask.update(with: .resizable)
-            }
-            
-            return self._prefWindowController
-        }
-    }
+    lazy var prefWindowController: NSWindowController! = {
+        
+        let generalPreferences = GeneralPreferencesViewController()
+        let aboutPreferences = AboutPreferencesViewController()
+        
+        let title = NSLocalizedString("Preferences", comment: "Common title for Preferences window")
+        let controller = MASPreferencesWindowController(viewControllers: [ generalPreferences, aboutPreferences ], title: title)
+        
+        return controller
+    }()
     
     var currentIconIndex = 3
     var animTimer: Timer?
