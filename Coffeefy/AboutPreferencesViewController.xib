@@ -17,7 +17,7 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="380" height="200"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
                 <box boxType="custom" borderWidth="0.0" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="rZ6-Id-0ms">
                     <rect key="frame" x="0.0" y="35" width="380" height="165"/>
@@ -62,9 +62,11 @@
                     <color key="borderColor" name="selectedTextColor" catalog="System" colorSpace="catalog"/>
                     <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </box>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mca-6k-BKQ">
-                    <rect key="frame" x="3" y="0.0" width="117" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mca-6k-BKQ">
+                    <rect key="frame" x="3" y="0.0" width="122" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="VCn-9y-wtk"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="홈페이지" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6MZ-Rn-MBn">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
@@ -73,20 +75,11 @@
                         <action selector="openHomepage:" target="-2" id="BDY-lp-fZX"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JOu-dN-vAL">
-                    <rect key="frame" x="132" y="0.0" width="117" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="버그 신고" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XSI-LD-JuE">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="openIssueTracker:" target="-2" id="U5g-X3-Jy9"/>
-                    </connections>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lR6-Wu-iND">
-                    <rect key="frame" x="254" y="0.0" width="123" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lR6-Wu-iND">
+                    <rect key="frame" x="256" y="0.0" width="122" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="ROa-wG-BLC"/>
+                    </constraints>
                     <buttonCell key="cell" type="push" title="개발자 홈페이지" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nwe-zj-DIw">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
@@ -95,12 +88,31 @@
                         <action selector="openAuthorPage:" target="-2" id="s2S-54-G5U"/>
                     </connections>
                 </button>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JOu-dN-vAL">
+                    <rect key="frame" x="129" y="0.0" width="122" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="SpS-Au-pzy"/>
+                    </constraints>
+                    <buttonCell key="cell" type="push" title="버그 신고" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XSI-LD-JuE">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name=".AppleSDGothicNeoI-Regular"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openIssueTracker:" target="-2" id="U5g-X3-Jy9"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="rZ6-Id-0ms" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="1K6-Sa-NXo"/>
+                <constraint firstAttribute="bottom" secondItem="lR6-Wu-iND" secondAttribute="bottom" constant="7" id="2AB-XA-Uw4"/>
+                <constraint firstItem="JOu-dN-vAL" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="3Wm-sE-1A7"/>
                 <constraint firstAttribute="trailing" secondItem="rZ6-Id-0ms" secondAttribute="trailing" id="7zC-Ui-XRy"/>
                 <constraint firstItem="rZ6-Id-0ms" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="ESR-6K-e50"/>
                 <constraint firstAttribute="bottom" secondItem="rZ6-Id-0ms" secondAttribute="bottom" constant="35" id="aYE-W3-VZZ"/>
+                <constraint firstAttribute="bottom" secondItem="JOu-dN-vAL" secondAttribute="bottom" constant="7" id="f1e-Ds-WxQ"/>
+                <constraint firstAttribute="trailing" secondItem="lR6-Wu-iND" secondAttribute="trailing" constant="8" id="m1C-So-y1n"/>
+                <constraint firstItem="mca-6k-BKQ" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="9" id="ngg-Tn-ANe"/>
+                <constraint firstAttribute="bottom" secondItem="mca-6k-BKQ" secondAttribute="bottom" constant="7" id="zub-24-Zug"/>
             </constraints>
             <point key="canvasLocation" x="135" y="168"/>
         </customView>
