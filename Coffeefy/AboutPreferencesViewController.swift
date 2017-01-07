@@ -21,14 +21,7 @@ class AboutPreferencesViewController: NSViewController, MASPreferencesViewContro
         return NSLocalizedString("About", comment: "About this application")
     }
     
-    init() {
-        super.init(nibName: "AboutPreferencesView", bundle: nil)!
-        self.identifier = "AboutPreferences"
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
+    override var identifier: String? { get {return "AboutPreferences"} set { super.identifier = newValue} }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -19,6 +19,8 @@ class GeneralPreferencesViewController: NSViewController, MASPreferencesViewCont
         return [vendor1, vendor2, vendor3]
     }
     
+    override var identifier: String? { get {return "GeneralPreferences"} set { super.identifier = newValue} }
+    
     // 이건 왜 안되는 걸까
     // @IBOutlet var vendorCollection: [NSButton]!
 
@@ -30,14 +32,6 @@ class GeneralPreferencesViewController: NSViewController, MASPreferencesViewCont
         return NSLocalizedString("General", comment: "Toolbar item name for the General preference pane")
     }
     
-    init() {
-        super.init(nibName: "GeneralPreferencesView", bundle: nil)!
-        self.identifier = "GeneralPreferences"
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
