@@ -11,9 +11,9 @@
 		F20EDFA51E1B883600C842F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFA41E1B883600C842F9 /* Assets.xcassets */; };
 		F20EDFA81E1B883600C842F9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFA61E1B883600C842F9 /* MainMenu.xib */; };
 		F20EDFB31E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EDFB11E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift */; };
-		F20EDFB41E1B9EFA00C842F9 /* GeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesView.xib */; };
+		F20EDFB41E1B9EFA00C842F9 /* GeneralPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesViewController.xib */; };
 		F20EDFB71E1B9F0E00C842F9 /* AboutPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EDFB51E1B9F0E00C842F9 /* AboutPreferencesViewController.swift */; };
-		F20EDFB81E1B9F0E00C842F9 /* AboutPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesView.xib */; };
+		F20EDFB81E1B9F0E00C842F9 /* AboutPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesViewController.xib */; };
 		F20EDFBB1E1C1D1400C842F9 /* LoginBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EDFBA1E1C1D1400C842F9 /* LoginBot.swift */; };
 		F23C74421E1D401C007B7B21 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C74411E1D401C007B7B21 /* SwiftRegex.swift */; };
 		F2BEA0DE1E1D1B1E00DFAE92 /* coffeefy.js in Resources */ = {isa = PBXBuildFile; fileRef = F2BEA0DD1E1D1B1E00DFAE92 /* coffeefy.js */; };
@@ -30,9 +30,9 @@
 		F20EDFA71E1B883600C842F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F20EDFA91E1B883600C842F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F20EDFB11E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
-		F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesView.xib; sourceTree = "<group>"; };
+		F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GeneralPreferencesViewController.xib; sourceTree = "<group>"; };
 		F20EDFB51E1B9F0E00C842F9 /* AboutPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutPreferencesViewController.swift; sourceTree = "<group>"; };
-		F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPreferencesView.xib; sourceTree = "<group>"; };
+		F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPreferencesViewController.xib; sourceTree = "<group>"; };
 		F20EDFBA1E1C1D1400C842F9 /* LoginBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBot.swift; sourceTree = "<group>"; };
 		F23C74411E1D401C007B7B21 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
 		F2BEA0DD1E1D1B1E00DFAE92 /* coffeefy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = coffeefy.js; sourceTree = "<group>"; };
@@ -104,9 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				F20EDFB11E1B9EFA00C842F9 /* GeneralPreferencesViewController.swift */,
-				F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesView.xib */,
+				F20EDFB21E1B9EFA00C842F9 /* GeneralPreferencesViewController.xib */,
 				F20EDFB51E1B9F0E00C842F9 /* AboutPreferencesViewController.swift */,
-				F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesView.xib */,
+				F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesViewController.xib */,
 			);
 			name = Preferences;
 			sourceTree = "<group>";
@@ -174,10 +174,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F20EDFB41E1B9EFA00C842F9 /* GeneralPreferencesView.xib in Resources */,
+				F20EDFB41E1B9EFA00C842F9 /* GeneralPreferencesViewController.xib in Resources */,
 				F20EDFA51E1B883600C842F9 /* Assets.xcassets in Resources */,
 				F20EDFA81E1B883600C842F9 /* MainMenu.xib in Resources */,
-				F20EDFB81E1B9F0E00C842F9 /* AboutPreferencesView.xib in Resources */,
+				F20EDFB81E1B9F0E00C842F9 /* AboutPreferencesViewController.xib in Resources */,
 				F2BEA0DE1E1D1B1E00DFAE92 /* coffeefy.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
