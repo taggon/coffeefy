@@ -15,30 +15,30 @@ let firstURL = "http://first.wifi.olleh.com/starbucks/index_en_new.html"
 
 class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
     
-    let panel = NSPanel()
-    let webview = WKWebView()
+    lazy var panel: NSPanel! = {
+        let p = NSPanel()
+        p.contentView = self.webview
+        p.level = Int(CGWindowLevelForKey(CGWindowLevelKey.normalWindow))
+        return p
+    }()
+    lazy var webview: WKWebView! = {
+        let wv = WKWebView()
+        self.initWebview(wv)
+        return wv
+    }()
     var branch = ""
-    
-    override init() {
-        super.init()
 
-        initWebview()
-        panel.contentView = webview
-        // panel.styleMask = panel.styleMask.union(.resizable)
-        panel.level = Int(CGWindowLevelForKey(CGWindowLevelKey.normalWindow))
-    }
-
-    func initWebview() {
-        let contentController = webview.configuration.userContentController
+    func initWebview(_ webView: WKWebView) {
+        let contentController = webView.configuration.userContentController
 
         contentController.add(self, name: messageHandlerKey)
         
         let mainScript = WKUserScript(source: loadTextBundle(forResource: "coffeefy", ofType: "js"), injectionTime: .atDocumentEnd, forMainFrameOnly: true)
         contentController.addUserScript(mainScript)
 
-        webview.navigationDelegate = self
-        webview.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"
-        // webview.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
+        webView.navigationDelegate = self
+        webView.customUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"
+        // webView.configuration.preferences.setValue(true, forKey: "developerExtrasEnabled")
     }
     
     func login() {
@@ -47,14 +47,6 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
         Alamofire.request(firstURL).responseString { response in
             if let content = response.result.value {
                 if !content.hasPrefix("<script") {
-                    /*
-                    let str = String(data: response.data!, encoding: String.Encoding.init(rawValue: CFStringConvertEncodingToNSStringEncoding(0x0422)))!
-                    let matches: [String] = str["(?<=NAME=\"branchflag\" value=\")([^\"]+)"].matches()
-                    self.branch = (matches.count > 0) ? matches[0] : ""
-                    */
-
-                    // self.panel.makeKeyAndOrderFront(nil)
-
                     // 다른 사이트로 먼저 이동해야 접속이 이루어짐 HTTP 프로토콜 필수
                     self.webview.load( URLRequest(url: URL(string: "http://google.com")!) )
                     // self.webview.load( URLRequest(url: URL(string: firstURL)!) ) // 에러가 발생하는 사례
