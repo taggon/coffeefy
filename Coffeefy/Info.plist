@@ -39,6 +39,10 @@
 	<string>NSApplication</string>
 	<key>URLs</key>
 	<dict>
+		<key>API:Latest</key>
+		<string>https://api.github.com/repos/taggon/coffeefy/releases/latest</string>
+		<key>Releases</key>
+		<string>https://github.com/taggon/coffeefy/releases</string>
 		<key>Author</key>
 		<string>https://taegon.kim</string>
 		<key>Homepage</key>
