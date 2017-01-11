@@ -43,6 +43,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = statusMenu
         loadStatusImage(name: "coffeefy3")
         
+        // show version string in the first menu item
+        statusMenu.items[0].title = "Coffeefy v\(self.version)"
+
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveResult), name: PostResultNotification, object: nil)
         
         // start watching wifi connection status
@@ -121,13 +124,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         Alamofire.request(urls["API:Latest"]!).responseJSON { response in
             if let json = response.result.value as? [String: Any], let tag = json["tag_name"] as? String {
-                let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
-                let buildNum = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
-                let versionString = "v\(version)"
+                let versionString = "v\(self.version)"
                 
                 let popup = NSAlert()
                 popup.window.title = "업데이트 확인"
-                popup.messageText = "Coffeefy \(versionString) (Build \(buildNum))"
+                popup.messageText = "Coffeefy \(versionString) (Build \(self.buildNumber))"
                 popup.alertStyle = .informational
 
                 

@@ -16,6 +16,7 @@
 		F20EDFB81E1B9F0E00C842F9 /* AboutPreferencesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesViewController.xib */; };
 		F20EDFBB1E1C1D1400C842F9 /* LoginBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20EDFBA1E1C1D1400C842F9 /* LoginBot.swift */; };
 		F23C74421E1D401C007B7B21 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C74411E1D401C007B7B21 /* SwiftRegex.swift */; };
+		F2B1FDC91E264E6C00AE3D22 /* AppDelegate+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B1FDC81E264E6C00AE3D22 /* AppDelegate+Version.swift */; };
 		F2BEA0DE1E1D1B1E00DFAE92 /* coffeefy.js in Resources */ = {isa = PBXBuildFile; fileRef = F2BEA0DD1E1D1B1E00DFAE92 /* coffeefy.js */; };
 		FB811DF32E815D2D4FBE4F1B /* Pods_Coffeefy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C48D3B5A62CDD9F19DFC7D72 /* Pods_Coffeefy.framework */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		F20EDFB61E1B9F0E00C842F9 /* AboutPreferencesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutPreferencesViewController.xib; sourceTree = "<group>"; };
 		F20EDFBA1E1C1D1400C842F9 /* LoginBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginBot.swift; sourceTree = "<group>"; };
 		F23C74411E1D401C007B7B21 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+		F2B1FDC81E264E6C00AE3D22 /* AppDelegate+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Version.swift"; sourceTree = "<group>"; };
 		F2BEA0DD1E1D1B1E00DFAE92 /* coffeefy.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = coffeefy.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				F2BEA0DD1E1D1B1E00DFAE92 /* coffeefy.js */,
 				F20EDFB91E1B9F1300C842F9 /* Preferences */,
 				F20EDFA21E1B883600C842F9 /* AppDelegate.swift */,
+				F2B1FDC81E264E6C00AE3D22 /* AppDelegate+Version.swift */,
 				F20EDFA41E1B883600C842F9 /* Assets.xcassets */,
 				F20EDFA61E1B883600C842F9 /* MainMenu.xib */,
 				F20EDFA91E1B883600C842F9 /* Info.plist */,
@@ -242,6 +245,7 @@
 				F23C74421E1D401C007B7B21 /* SwiftRegex.swift in Sources */,
 				F20EDFB71E1B9F0E00C842F9 /* AboutPreferencesViewController.swift in Sources */,
 				F20EDFBB1E1C1D1400C842F9 /* LoginBot.swift in Sources */,
+				F2B1FDC91E264E6C00AE3D22 /* AppDelegate+Version.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

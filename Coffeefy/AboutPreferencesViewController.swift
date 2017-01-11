@@ -25,12 +25,9 @@ class AboutPreferencesViewController: NSViewController, MASPreferencesViewContro
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
         
-        if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            let buildNum = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
-            versionField.stringValue = "Version \(version) (Build \(buildNum))"
-        }
+        let appDelegate = NSApplication.shared().delegate as! AppDelegate
+        versionField.stringValue = "Version \(appDelegate.version) (Build \(appDelegate.buildNumber))"
     }
     
     func openURLwithDefaultBrowser(urlKey: String) {
