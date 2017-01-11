@@ -28,8 +28,8 @@ class AboutPreferencesViewController: NSViewController, MASPreferencesViewContro
         // Do view setup here.
         
         if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
-            let buildNum = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "0"
-            versionField.stringValue = "Version \(version).\(buildNum)"
+            let buildNum = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
+            versionField.stringValue = "Version \(version) (Build \(buildNum))"
         }
     }
     

@@ -122,12 +122,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Alamofire.request(urls["API:Latest"]!).responseJSON { response in
             if let json = response.result.value as? [String: Any], let tag = json["tag_name"] as? String {
                 let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
-                let buildNum = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "0"
-                let versionString = "v\(version).\(buildNum)"
+                let buildNum = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
+                let versionString = "v\(version)"
                 
                 let popup = NSAlert()
                 popup.window.title = "업데이트 확인"
-                popup.messageText = "Coffeefy \(versionString)"
+                popup.messageText = "Coffeefy \(versionString) (Build \(buildNum))"
                 popup.alertStyle = .informational
 
                 
