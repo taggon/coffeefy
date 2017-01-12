@@ -2,6 +2,8 @@
 
 스타벅스 Wifi에 자동으로 접속해주는 맥 애플리케이션입니다.
 
+![coffeefy](https://cloud.githubusercontent.com/assets/212034/21880524/cb20e8aa-d8e2-11e6-90c3-9c7f4d986373.gif)
+
 ## 사용법
 
 1. 터미널에서 다음 명령어를 실행하여 Wifi에 로그인하면 나타나는 Captive Network Assistant를 끕니다.
