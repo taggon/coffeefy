@@ -9,6 +9,7 @@
 import Cocoa
 import WebKit
 import Alamofire
+import CocoaLumberjack
 
 let messageHandlerKey = "coffeefy"
 let firstURL = "http://first.wifi.olleh.com/starbucks/index_en_new.html"
@@ -26,6 +27,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
         self.initWebview(wv)
         return wv
     }()
+
     var branch = ""
 
     func initWebview(_ webView: WKWebView) {
@@ -47,6 +49,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
         Alamofire.request(firstURL).responseString { response in
             if let content = response.result.value {
                 if !content.hasPrefix("<script") {
+                    DDLogInfo("Moving to Google...")
                     // 다른 사이트로 먼저 이동해야 접속이 이루어짐 HTTP 프로토콜 필수
                     self.webview.load( URLRequest(url: URL(string: "http://google.com")!) )
                     // self.webview.load( URLRequest(url: URL(string: firstURL)!) ) // 에러가 발생하는 사례
@@ -55,7 +58,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
                 }
             }
 
-            NSLog("This application works only with Startbucks Wifi network.")
+            DDLogWarn("This application works only with Startbucks Wifi network.")
             self.postResult(success: false)
         }
     }
@@ -67,8 +70,8 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
             let content = try String(contentsOfFile: path!, encoding: .utf8)
             return content
         } catch let error {
-            NSLog("Error loading contentsOf url \(path)")
-            NSLog(error.localizedDescription)
+            DDLogError("Error loading contentsOf url \(path)")
+            DDLogError(error.localizedDescription)
         }
         
         return ""
@@ -97,11 +100,15 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
             let name = UserDefaults.standard.string(forKey: "name") ?? ""
             let email = UserDefaults.standard.string(forKey: "email") ?? ""
             let phone = UserDefaults.standard.string(forKey: "phone") ?? ""
+
             webview.evaluateJavaScript("coffeefy({name:'\(name)', email:'\(email)', phone: '\(phone)', branch: '\(self.branch)'})", completionHandler: nil)
+            DDLogInfo("Trying to sign in... (name=\(name), email=\(email))")
         } else if body.hasPrefix("alert:") {
             let errorMessage = body.substring(from: body.characters.index(body.characters.startIndex, offsetBy: 6))
             notify(title: "인증 에러", subtitle: errorMessage, informativeText: nil)
             postResult(success: false)
+            
+            DDLogError("Authorization failed: \(errorMessage)")
         }
     }
     
@@ -114,6 +121,7 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
         if host == "www.istarbucks.co.kr" || host.hasPrefix("www.google.") {
             webView.stopLoading()
             notify(title: "접속 성공", subtitle: "이제 스타벅스 와이파이를 사용할 수 있습니다.", informativeText: nil)
+            DDLogInfo("Successfully connected!")
             postResult(success: true)
         }
     }

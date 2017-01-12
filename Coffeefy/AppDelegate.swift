@@ -11,8 +11,10 @@ import MASPreferences
 import ReachabilitySwift
 import CoreWLAN
 import Alamofire
+import CocoaLumberjack
 
 public let PostResultNotification = NSNotification.Name("PostResultNotification")
+public let ddLogLevel: DDLogLevel = DDLogLevel.info
 
 let keyIgnoreVersion = "Ignore Version"
 
@@ -40,6 +42,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let bot = LoginBot()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // initiate logger
+        #if DEBUG
+            DDLog.add(DDTTYLogger.sharedInstance())
+        #else
+            let fileLogger = DDFileLogger()
+            fileLogger?.rollingFrequency = 7 * 60 * 60 * 24 // a week
+            fileLogger?.logFileManager.maximumNumberOfLogFiles = 1
+            DDLog.add(fileLogger)
+        #endif
+        
+        // status menu
         statusItem.menu = statusMenu
         loadStatusImage(name: "coffeefy3")
         
@@ -53,7 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         do {
             try reachability.startNotifier()
         } catch {
-            NSLog("Could not start reachability notifier")
+            DDLogWarn("Could not start reachability notifier")
         }
     }
 
@@ -67,12 +80,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         // 스타벅스 SSID일 때만 반응
-        let ssid = CWWiFiClient()?.interface(withName: nil)?.ssid() ?? ""
+        let ssid = CWWiFiClient()?.interface(withName: nil)?.ssid() ?? "[Empty SSID]"
         if ssid.lowercased().contains("starbucks") {
             startAnimatingStatusImage()
             bot.login()
         } else {
-            NSLog("This application works only with Starbucks Wifi network")
+            DDLogWarn("Unknown SSID - \(ssid) is not Starbucks Wifi network")
         }
     }
     
