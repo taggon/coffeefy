@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             DDLog.add(DDTTYLogger.sharedInstance())
         #else
             let fileLogger = DDFileLogger()
-            fileLogger?.rollingFrequency = 7 * 60 * 60 * 24 // a week
+            fileLogger?.rollingFrequency = TimeInterval( 7 * 60 * 60 * 24 )// a week
             fileLogger?.logFileManager.maximumNumberOfLogFiles = 1
             DDLog.add(fileLogger)
         #endif

@@ -44,22 +44,26 @@ class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
     }
     
     func login() {
-        NSLog("Checking if in Startbucks network")
+        DDLogInfo("Checking if in Startbucks network")
 
         Alamofire.request(firstURL).responseString { response in
-            if let content = response.result.value {
-                if !content.hasPrefix("<script") {
-                    DDLogInfo("Moving to Google...")
-                    // 다른 사이트로 먼저 이동해야 접속이 이루어짐 HTTP 프로토콜 필수
-                    self.webview.load( URLRequest(url: URL(string: "http://google.com")!) )
-                    // self.webview.load( URLRequest(url: URL(string: firstURL)!) ) // 에러가 발생하는 사례
-                    
-                    return;
-                }
+            guard let content = response.result.value else {
+                DDLogWarn("Could not get content from the network.")
+                return
             }
 
-            DDLogWarn("This application works only with Startbucks Wifi network.")
-            self.postResult(success: false)
+//            if !content.hasPrefix("<script") {
+                DDLogInfo("Moving to Google...")
+                // 다른 사이트로 먼저 이동해야 접속이 이루어짐 HTTP 프로토콜 필수
+                self.webview.load( URLRequest(url: URL(string: "http://google.com")!) )
+                // self.webview.load( URLRequest(url: URL(string: firstURL)!) ) // 에러가 발생하는 사례
+                
+                return;
+//            } else {
+//              DDLogWarn("This application works only with Startbucks Wifi network.")
+//            }
+
+//            self.postResult(success: false)
         }
     }
     
