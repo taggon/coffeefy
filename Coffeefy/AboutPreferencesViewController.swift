@@ -10,14 +10,15 @@ import Cocoa
 import MASPreferences
 
 class AboutPreferencesViewController: NSViewController, MASPreferencesViewController {
-    
+    var viewIdentifier: String = ""
+
     @IBOutlet weak var versionField: NSTextField!
     
-    public var toolbarItemImage: NSImage! {
+    public var toolbarItemImage: NSImage? {
         return NSImage(named: NSImageNameInfo)
     }
     
-    public var toolbarItemLabel: String! {
+    public var toolbarItemLabel: String? {
         return NSLocalizedString("About", comment: "About this application")
     }
     

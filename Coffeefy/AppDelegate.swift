@@ -8,7 +8,7 @@
 
 import Cocoa
 import MASPreferences
-import ReachabilitySwift
+import Reachability
 import CoreWLAN
 import Alamofire
 import CocoaLumberjack
@@ -44,7 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // initiate logger
         #if DEBUG
-            DDLog.add(DDTTYLogger.sharedInstance())
+            DDLog.add(DDTTYLogger.sharedInstance)
         #else
             let fileLogger = DDFileLogger()
             fileLogger?.rollingFrequency = TimeInterval( 7 * 60 * 60 * 24 )// a week
@@ -62,7 +62,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveResult), name: PostResultNotification, object: nil)
         
         // start watching wifi connection status
-        NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged),name: ReachabilityChangedNotification,object: reachability)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reachabilityChanged),name: Notification.Name.reachabilityChanged, object: reachability)
         do {
             try reachability.startNotifier()
         } catch {

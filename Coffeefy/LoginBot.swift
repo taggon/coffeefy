@@ -12,7 +12,7 @@ import Alamofire
 import CocoaLumberjack
 
 let messageHandlerKey = "coffeefy"
-let firstURL = "http://first.wifi.olleh.com/starbucks/index_en_new.html"
+let firstURL = "http://first.wifi.olleh.com/starbucks/index_en.html"
 
 class LoginBot: NSObject, WKScriptMessageHandler, WKNavigationDelegate {
     

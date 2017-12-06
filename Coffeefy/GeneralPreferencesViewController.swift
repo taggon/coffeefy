@@ -10,7 +10,8 @@ import Cocoa
 import MASPreferences
 
 class GeneralPreferencesViewController: NSViewController, MASPreferencesViewController {
-    
+    var viewIdentifier: String = ""
+
     @IBOutlet var vendor1: NSButton!
     @IBOutlet var vendor2: NSButton!
     @IBOutlet var vendor3: NSButton!
@@ -24,14 +25,13 @@ class GeneralPreferencesViewController: NSViewController, MASPreferencesViewCont
     // 이건 왜 안되는 걸까
     // @IBOutlet var vendorCollection: [NSButton]!
 
-    public var toolbarItemImage: NSImage! {
+    public var toolbarItemImage: NSImage? {
         return NSImage(named: NSImageNamePreferencesGeneral)
     }
     
-    public var toolbarItemLabel: String! {
+    public var toolbarItemLabel: String? {
         return NSLocalizedString("General", comment: "Toolbar item name for the General preference pane")
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

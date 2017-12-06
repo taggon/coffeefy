@@ -34,5 +34,7 @@ if (typeof window.NextPage === 'function') {
 // form page
 if (typeof window.goAct === 'function') {
 	// request user information
-	window.webkit.messageHandlers.coffeefy.postMessage('try-login');
+    document.getElementById('purpose_agree').checked = true;
+    goAct();
 }
+

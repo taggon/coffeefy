@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.3.0</string>
+	<string>1.3.1</string>
 	<key>CFBundleVersion</key>
-	<string>17</string>
+	<string>21</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.productivity</string>
 	<key>LSMinimumSystemVersion</key>
@@ -41,14 +41,14 @@
 	<dict>
 		<key>API:Latest</key>
 		<string>https://api.github.com/repos/taggon/coffeefy/releases/latest</string>
-		<key>Releases</key>
-		<string>https://github.com/taggon/coffeefy/releases</string>
 		<key>Author</key>
 		<string>https://taegon.kim</string>
 		<key>Homepage</key>
 		<string>https://github.com/taggon/coffeefy</string>
 		<key>Issue Tracker</key>
 		<string>https://github.com/taggon/coffeefy/issues</string>
+		<key>Releases</key>
+		<string>https://github.com/taggon/coffeefy/releases</string>
 	</dict>
 </dict>
 </plist>
