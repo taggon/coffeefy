@@ -49,7 +49,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let fileLogger = DDFileLogger()
             fileLogger?.rollingFrequency = TimeInterval( 7 * 60 * 60 * 24 )// a week
             fileLogger?.logFileManager.maximumNumberOfLogFiles = 1
-            DDLog.add(fileLogger)
+            DDLog.add(fileLogger!)
         #endif
         
         // status menu
